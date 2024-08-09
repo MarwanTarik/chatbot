@@ -28,6 +28,7 @@ Create a `.env` file in the project root and configure the following environment
 
 - `GEMINI_API_KEY`: Your Gemini API key.
 - `PORT`: The port number on which the application will run. default is 3000.
+  **Note:** If you change the default port, be sure to update the port number in `script.js` routes to match.
 
 Ensure your `.env` file looks something like this:
 
