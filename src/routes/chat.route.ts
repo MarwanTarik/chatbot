@@ -1,10 +1,10 @@
-import { response, Router } from "express";
+import { Router } from "express";
 import { Request, Response } from "express";
 import { chat } from "../services/chatbot.service";
 
 const router = Router();
 
-router.post('/', async (req: Request, res: Response) => {
+router.post('/chat', async (req: Request, res: Response) => {
   const message = req.body.message;
 
   if (!message) {
