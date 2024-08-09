@@ -1,5 +1,6 @@
 import express from 'express';
 import chatRoute from './routes/chat.route';
+import analysisRoute from './routes/analyze.route';
 import cors from 'cors';
 
 const app = express();
@@ -14,5 +15,6 @@ app.use(cors({
 }));
 
 app.use(chatRoute);
+app.use(analysisRoute);
 
 export default app;
