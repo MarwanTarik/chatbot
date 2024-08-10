@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start:dev": "tsx ./src/index.ts",
     "start:prod": "tsc -p tsconfig.json && node ./dist/index.js",
@@ -24,6 +25,8 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.16.0",
+    "compromise": "^14.14.0",
+    "compromise-dates": "^3.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"

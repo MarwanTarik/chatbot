@@ -11,6 +11,12 @@ importers:
       '@google/generative-ai':
         specifier: ^0.16.0
         version: 0.16.0
+      compromise:
+        specifier: ^14.14.0
+        version: 14.14.0
+      compromise-dates:
+        specifier: ^3.6.0
+        version: 3.6.0(compromise@14.14.0)
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -413,6 +419,15 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  compromise-dates@3.6.0:
+    resolution: {integrity: sha512-vER9MP3RHtCf4IkgzTq7dUYjd4G9sm0dwlJlj5cKuW4vMThRVL8ByODocWWxXad6azwKxRcKXOUX4kDEkcLAmg==}
+    peerDependencies:
+      compromise: '>=14.2.0'
+
+  compromise@14.14.0:
+    resolution: {integrity: sha512-0plNVaC0bGWZY3TeijP1xndyaAmjqBY1SSfsc/7ruVLTIfRCSHFLSd/uuK7ZTcaT/4y2u0lVn0et4tmmC98mRg==}
+    engines: {node: '>=12.0.0'}
+
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
@@ -481,6 +496,10 @@ packages:
 
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
+
+  efrt@2.7.0:
+    resolution: {integrity: sha512-/RInbCy1d4P6Zdfa+TMVsf/ufZVotat5hCw3QXmWtjU+3pFEOvOQ7ibo3aIxyCJw2leIeAMjmPj+1SLJiCpdrQ==}
+    engines: {node: '>=12.0.0'}
 
   encodeurl@1.0.2:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
@@ -635,6 +654,10 @@ packages:
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
+
+  grad-school@0.0.5:
+    resolution: {integrity: sha512-rXunEHF9M9EkMydTBux7+IryYXEZinRk6g8OBOGDBzo/qWJjhTxy86i5q7lQYpCLHN8Sqv1XX3OIOc7ka2gtvQ==}
+    engines: {node: '>=8.0.0'}
 
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
@@ -920,6 +943,14 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
+  spacetime-holiday@0.3.0:
+    resolution: {integrity: sha512-rp4HRFJXxFL7CeKBFBMO2Xar2IyJyUpxY1ssAWCyf0iOvckwknvDgK04KwToASHX9vgd+4yQnTpytzJAs81R8g==}
+    peerDependencies:
+      spacetime: '>=6.3.0'
+
+  spacetime@7.6.1:
+    resolution: {integrity: sha512-LeqAU4HKi0DyJzhp6qHAGklipM81WvGDXVGlwXEZ1hHJCZUT4JhduBwovdnRvtqUPjDaI4DT2C/ZlsIXodSF8w==}
+
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
@@ -931,6 +962,9 @@ packages:
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+
+  suffix-thumb@5.0.2:
+    resolution: {integrity: sha512-I5PWXAFKx3FYnI9a+dQMWNqTxoRt6vdBdb0O+BJ1sxXCWtSoQCusc13E58f+9p4MYx/qCnEMkD5jac6K2j3dgA==}
 
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
@@ -1352,6 +1386,18 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  compromise-dates@3.6.0(compromise@14.14.0):
+    dependencies:
+      compromise: 14.14.0
+      spacetime: 7.6.1
+      spacetime-holiday: 0.3.0(spacetime@7.6.1)
+
+  compromise@14.14.0:
+    dependencies:
+      efrt: 2.7.0
+      grad-school: 0.0.5
+      suffix-thumb: 5.0.2
+
   concat-map@0.0.1: {}
 
   content-disposition@0.5.4:
@@ -1402,6 +1448,8 @@ snapshots:
   dotenv@16.4.5: {}
 
   ee-first@1.1.1: {}
+
+  efrt@2.7.0: {}
 
   encodeurl@1.0.2: {}
 
@@ -1641,6 +1689,8 @@ snapshots:
   gopd@1.0.1:
     dependencies:
       get-intrinsic: 1.2.4
+
+  grad-school@0.0.5: {}
 
   graphemer@1.4.0: {}
 
@@ -1893,6 +1943,12 @@ snapshots:
 
   slash@3.0.0: {}
 
+  spacetime-holiday@0.3.0(spacetime@7.6.1):
+    dependencies:
+      spacetime: 7.6.1
+
+  spacetime@7.6.1: {}
+
   statuses@2.0.1: {}
 
   strip-ansi@6.0.1:
@@ -1900,6 +1956,8 @@ snapshots:
       ansi-regex: 5.0.1
 
   strip-json-comments@3.1.1: {}
+
+  suffix-thumb@5.0.2: {}
 
   supports-color@7.2.0:
     dependencies:

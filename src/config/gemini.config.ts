@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import config from "./main.config";
+import config from "./main.config.js";
 
 if (!config.geminKey) {
     throw new Error("Please provide a Gemin key");

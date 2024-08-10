@@ -1,4 +1,4 @@
-import model from "../config/gemini.config";
+import model from "../config/gemini.config.js";
 
 export async function chat(clientMessage: string): Promise<string> {
   const result = await model.generateContent([clientMessage]);

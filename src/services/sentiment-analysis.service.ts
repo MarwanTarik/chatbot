@@ -1,4 +1,4 @@
-import model from "../config/gemini.config";
+import model from "../config/gemini.config.js";
 
 export async function analyze(message: string): Promise<string> {
   if (!message) {
