@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { Request, Response } from "express";
-import { chat } from "../services/chatbot.service.js";
+import { recognize } from "../services/recognition.service.js";
 
 const router = Router();
 
-router.post('/chat', async (req: Request, res: Response) => {
+router.post('/recognize', async (req: Request, res: Response) => {
   const message = req.body.message;
 
   if (!message) {
@@ -12,8 +12,8 @@ router.post('/chat', async (req: Request, res: Response) => {
   }
 
   try {
-    const chatResponse = await chat(message);
-    return res.status(200).json({response: chatResponse});
+    const recognition = await recognize(message);
+    return res.status(200).json({recognition});
   } catch (error) {
     return res.status(500).json(error);
   }

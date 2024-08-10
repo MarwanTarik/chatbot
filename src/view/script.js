@@ -17,9 +17,17 @@
 
       const chatBox = document.getElementById('chat-box');
       chatBox.appendChild(userMessageElement);
-      chatBox.scrollTop = chatBox.scrollHeight;
 
+      // Fetch data from the server
       const chatRespone = await fetch(`${root}/chat`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      const regonizeRespone = await fetch(`${root}/recognize`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -34,21 +42,40 @@
         },
         body: JSON.stringify({ message }),
       });
-
       const json = await chatRespone.json();
-      
+      const sentimentJson = await sentimentRespone.json();
+      const regonizeJson = await regonizeRespone.json();
+
+      console.log(regonizeJson);
+
+      // Render UI Elements
       const botMessageElement = document.createElement('div');
       botMessageElement.classList.add('message', 'bot');
       botMessageElement.textContent = json.response;
 
       chatBox.appendChild(botMessageElement);
-
-      const sentimentJson = await sentimentRespone.json();
       
       const sentimentElement = document.createElement('div');
       sentimentElement.classList.add('message', 'sentiment');
       sentimentElement.textContent = sentimentJson.sentiment;
       chatBox.appendChild(sentimentElement);
+
+      const regonizeElement = document.createElement('div');
+      regonizeElement.classList.add('message', 'recognition');
+
+      const { names, dates, locations } = regonizeJson.recognition;
+      const nameOutput = names.length > 0 ? names.join(', ') : "No names recognized.";
+      const datesOutput = dates.length > 0 ? dates.join(', ') : "No dates recognized.";
+      const locationOutput = locations.length > 0 ? locations.join(', ') : "No locations recognized.";
+
+      regonizeElement.innerHTML = `
+      Names: ${nameOutput} <br>
+      Dates: ${datesOutput} <br>
+      Locations: ${locationOutput}
+    `;
+
+      chatBox.appendChild(regonizeElement);
+      chatBox.scrollTop = chatBox.scrollHeight;
     });
   }
 

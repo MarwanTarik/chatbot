@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { Request, Response } from "express";
-import { analyze } from "../services/sentiment-analysis.service";
+import { analyze } from "../services/sentiment-analysis.service.js";
 
 const router = Router();
 
